@@ -4,21 +4,27 @@ plugins {
     kotlin("jvm") version "1.3.31"
 }
 
-group = "com.hiczp"
-version = "1.0"
+allprojects {
+    group = "com.hiczp"
+    version = "1.0"
 
-repositories {
-    mavenCentral()
+    repositories {
+        mavenCentral()
+    }
+
+    tasks.withType<KotlinCompile> {
+        kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
 }
 
-dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-}
+subprojects {
+    apply(plugin = "kotlin")
 
-dependencies {
-    testImplementation("junit:junit:4.12")
-}
+    dependencies {
+        implementation(kotlin("stdlib-jdk8"))
+    }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8.toString()
+    dependencies {
+        testImplementation("junit:junit:4.12")
+    }
 }

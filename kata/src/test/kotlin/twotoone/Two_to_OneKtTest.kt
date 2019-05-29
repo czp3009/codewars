@@ -10,7 +10,5 @@ class TwoToOneTest {
         assertEquals("aehrsty", longest("aretheyhere", "yestheyarehere"))
         assertEquals("abcdefghilnoprstu", longest("loopingisfunbutdangerous", "lessdangerousthancoding"))
         assertEquals("acefghilmnoprstuy", longest("inmanylanguages", "theresapairoffunctions"))
-
     }
-
 }

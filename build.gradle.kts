@@ -23,9 +23,4 @@ subprojects {
     dependencies {
         implementation(kotlin("stdlib-jdk8"))
     }
-
-    dependencies {
-        testImplementation(kotlin("test"))
-        testImplementation("junit:junit:4.12")
-    }
 }
